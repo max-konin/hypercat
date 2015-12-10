@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 gem 'rails-api'
+gem 'responders'
 
 gem 'mongoid'
 
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'rspec-mocks', '~> 3.2.1'
   gem 'factory_girl_rails'
   gem 'database_cleaner', '~>1.4.1'
+  gem 'rspec_api_documentation'
 end
 
 group :development do
