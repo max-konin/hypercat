@@ -46,4 +46,34 @@ resource 'Hypernets' do
       expect(status).to eq 201
     end
   end
+
+  delete '/api/v1/hypernets/:id.json' do
+    parameter :id, "Hypernet's ID", required: true
+
+    let!(:hypernet){create :hypernet, name: 'example'}
+    let(:id){hypernet.id}
+
+    example 'Delete hypernet by ID' do
+      explanation 'Delete a hypernet by ID'
+
+      expect{do_request}.to change{Hypernet.count}.by(-1)
+    end
+  end
+
+  put '/api/v1/hypernets/:id.json' do
+    parameter :id, "Hypernet's ID", required: true
+    parameter :name, "Hypernet's name", scope: :hypernet
+
+    let!(:hypernet){create :hypernet, name: 'example'}
+    let(:id){hypernet.id}
+    let(:name) {'My hypernet'}
+
+    example 'Update a hypernet' do
+      explanation 'Update a hypernet'
+
+
+      expect{do_request}.to change{hypernet.reload.name}.to(name)
+      expect(status).to eq 204
+    end
+  end
 end

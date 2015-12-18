@@ -40,10 +40,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-    gem 'rspec-rails', '~> 3.2.3'
-    gem 'rspec-mocks', '~> 3.2.1'
-    gem 'factory_girl_rails'
-    gem 'database_cleaner', '~>1.4.1'
+  gem 'rspec-rails', '~> 3.2.3'
+  gem 'rspec-mocks', '~> 3.2.1'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
   gem 'rspec_api_documentation'
 end
 
