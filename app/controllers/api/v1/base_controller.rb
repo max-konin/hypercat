@@ -22,7 +22,7 @@ module Api
       end
 
       def create
-        @resource = klass.new permitted_params
+        @resource = build_new_resource permitted_params
         if @resource.save
           respond_with @resource, status: :created, location: false
         else
@@ -36,6 +36,10 @@ module Api
       end
 
       protected
+      def build_new_resource(params)
+        klass.new params
+      end
+
       def set_resource
         @resource = resource
       end

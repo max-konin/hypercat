@@ -48,6 +48,4 @@ end
 RspecApiDocumentation.configure do |config|
   config.request_headers_to_include = []
   config.response_headers_to_include = []
-
-  config.docs_dir = Rails.root.join("public", "apidocs")
 end

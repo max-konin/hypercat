@@ -1,7 +1,7 @@
 class Node
   include Mongoid::Document
 
-  field :data
+  field :data, type: Hash
 
   belongs_to :hypernet
 
