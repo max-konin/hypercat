@@ -1,0 +1,14 @@
+{
+  "watch": true,
+  "rootPath": "./app/",
+  "outputPath": "./dist/",
+  "compilerOptions": {
+    "comments"    : true, 
+    "debug"     : false, 
+    "declaration" : false, 
+    "minw"      : false, 
+    "moduleType"  : "commonjs", 
+    "sourcemap"   : true, 
+    "target"    : "ES3" 
+  }
+}
