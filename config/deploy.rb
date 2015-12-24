@@ -55,7 +55,12 @@ set :nginx_use_ssl, false
 
 # end puma conf
 
-
+if File.exist?("./config/deploy_id_rsa")
+  puts "file exist"
+  set :ssh_options, keys: ["./config/deploy_id_rsa"]
+else
+  set :password, ask('Server password:', nil, echo: false)
+end
 
 namespace :deploy do
 

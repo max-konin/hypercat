@@ -1,0 +1,21 @@
+language: ruby
+
+cache: bundler
+
+sudo: false
+
+services:
+  - mongodb
+
+rvm:
+  - 2.2.3
+
+after_success:
+  - openssl aes-256-cbc -k $DEPLOY_KEY -in /home/travis/build/max-konin/hypercat/config/deploy_id_rsa_enc_travis -d -a -out  /home/travis/build/max-konin/hypercat/config/deploy_id_rsa
+  - chmod 600 /home/travis/build/max-konin/hypercat/config/deploy_id_rsa
+  - cd /home/travis/build/max-konin/hypercat
+  - "[[ $TRAVIS_BRANCH = 'development' ]] && bundle exec cap staging deploy"
+
+env:
+  global:
+    secure: A20UNzTj/OD4vrJ+wfh1T0SG5l61FG5ZgI1BoLd9vxJrY0hhMXzxYOE8CNhGWHjmN63OPga8m8FPabQfxlEdVn03/oSnmLqNiZHUAPPqwCYnH+AVGd85KnIT9cHViMwUWT+bM4RfEX4y+M2eqLdeNcM/UqiIsNhmgmC1ahUONww=
