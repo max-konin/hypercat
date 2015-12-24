@@ -53,6 +53,7 @@ set :puma_init_active_record, false
 set :puma_preload_app, true
 set :nginx_use_ssl, false
 
+set :nginx_server_name, 'hc.kerweb.ru'
 # end puma conf
 
 if File.exist?("./config/deploy_id_rsa")
