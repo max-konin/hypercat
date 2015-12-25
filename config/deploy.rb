@@ -63,7 +63,4 @@ else
   set :password, ask('Server password:', nil, echo: false)
 end
 
-namespace :deploy do
-
-
-end
+before 'deploy:publishing', 'viewer:build'
