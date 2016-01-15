@@ -40,8 +40,8 @@ resource 'Edges' do
   post '/api/v1/edges.json' do
     parameter :data, "Custom JSON data", scope: :edge
     parameter :graph_id, "Graph's ID", required: true
-    parameter :source_id, "Source node's ID", scope: :edge, require: true
-    parameter :target_id, "Target node's ID", scope: :edge, require: true
+    parameter :source_id, "Source node's ID", require: true, scope: :edge
+    parameter :target_id, "Target node's ID", require: true, scope: :edge
 
     let(:data) { {x: 1, y: 2} }
     let(:source_node) {create :node}
@@ -75,8 +75,8 @@ resource 'Edges' do
   put '/api/v1/edges/:id.json' do
     parameter :id, "Graph's ID", required: true
     parameter :data, "Custom JSON data", scope: :edge
-    parameter :source_id, "Source node's ID", scope: :edge, require: true
-    parameter :target_id, "Target node's ID", scope: :edge, require: true
+    parameter :source_id, "Source node's ID", require: true, scope: :edge
+    parameter :target_id, "Target node's ID", require: true, scope: :edge
     parameter :graph_id, "Graph's ID", required: true
 
     let!(:edge){create :edge, graph: graph, data: {name: 'first edge'}}
