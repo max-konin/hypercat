@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :hypernets
       resources :nodes
       resources :edges
+      resources :graphs
     end
   end
 end
