@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nodes API</title>
+    <title>Edges API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,13 +106,13 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Nodes API</h1>
+      <h1>Edges API</h1>
 
       <div class="article">
-        <h2>Delete node by ID</h2>
-        <h3>DELETE /api/v1/nodes/:id.json</h3>
+        <h2>Update a edge</h2>
+        <h3>PUT /api/v1/edges/:id.json</h3>
           <p class="explanation">
-            Delete a hypernet by ID
+            Update a edge
           </p>
 
           <h3>Parameters</h3>
@@ -129,15 +129,39 @@ table th, table td {
                     <span class="name">id</span>
                 </td>
                 <td>
-                  <span class="description">Node&#39;s ID</span>
+                  <span class="description">Graph&#39;s ID</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">edge[data]</span>
+                </td>
+                <td>
+                  <span class="description">Custom JSON data</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">edge[source_id]</span>
+                </td>
+                <td>
+                  <span class="description">Source node&#39;s ID</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="name">edge[target_id]</span>
+                </td>
+                <td>
+                  <span class="description">Target node&#39;s ID</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">hypernet_id</span>
+                    <span class="name">graph_id</span>
                 </td>
                 <td>
-                  <span class="description">Hypernet&#39;s ID</span>
+                  <span class="description">Graph&#39;s ID</span>
                 </td>
               </tr>
             </tbody>
@@ -148,16 +172,16 @@ table th, table td {
 
 
           <h4>Route</h4>
-          <pre class="request route highlight">DELETE /api/v1/nodes/5698e26335410e3b02000035.json</pre>
+          <pre class="request route highlight">PUT /api/v1/edges/5698e26335410e3b02000023.json</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">hypernet_id=5698e26335410e3b02000034</pre>
+            <pre class="request body">edge[data][name]=last+edge&edge[source_id]=5698e26335410e3b02000027&edge[target_id]=5698e26335410e3b02000025&graph_id=5698e26335410e3b02000022</pre>
 
 
             <h3>Response</h3>
             <h4>Status</h4>
-            <pre class="response status">200 OK</pre>
+            <pre class="response status">204 No Content</pre>
       </div>
     </div>
   </body>

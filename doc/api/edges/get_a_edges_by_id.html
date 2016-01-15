@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nodes API</title>
+    <title>Edges API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,13 +106,13 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Nodes API</h1>
+      <h1>Edges API</h1>
 
       <div class="article">
-        <h2>Delete node by ID</h2>
-        <h3>DELETE /api/v1/nodes/:id.json</h3>
+        <h2>Get a edges by id</h2>
+        <h3>GET /api/v1/edges/:id.json</h3>
           <p class="explanation">
-            Delete a hypernet by ID
+            Returns a edges by ID
           </p>
 
           <h3>Parameters</h3>
@@ -129,15 +129,15 @@ table th, table td {
                     <span class="name">id</span>
                 </td>
                 <td>
-                  <span class="description">Node&#39;s ID</span>
+                  <span class="description">Edge&#39;s ID</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">hypernet_id</span>
+                    <span class="name">graph_id</span>
                 </td>
                 <td>
-                  <span class="description">Hypernet&#39;s ID</span>
+                  <span class="description">Graph&#39;s ID</span>
                 </td>
               </tr>
             </tbody>
@@ -148,16 +148,34 @@ table th, table td {
 
 
           <h4>Route</h4>
-          <pre class="request route highlight">DELETE /api/v1/nodes/5698e26335410e3b02000035.json</pre>
+          <pre class="request route highlight">GET /api/v1/edges/5698e26335410e3b0200000e.json?graph_id=5698e26335410e3b0200000d</pre>
 
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">graph_id: 5698e26335410e3b0200000d</pre>
 
-            <h4>Body</h4>
-            <pre class="request body">hypernet_id=5698e26335410e3b02000034</pre>
 
 
             <h3>Response</h3>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;_id&quot;: {
+    &quot;$oid&quot;: &quot;5698e26335410e3b0200000e&quot;
+  },
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;first edge&quot;
+  },
+  &quot;graph_id&quot;: {
+    &quot;$oid&quot;: &quot;5698e26335410e3b0200000d&quot;
+  },
+  &quot;source_id&quot;: {
+    &quot;$oid&quot;: &quot;5698e26335410e3b02000012&quot;
+  },
+  &quot;target_id&quot;: {
+    &quot;$oid&quot;: &quot;5698e26335410e3b02000010&quot;
+  }
+}</pre>
       </div>
     </div>
   </body>
