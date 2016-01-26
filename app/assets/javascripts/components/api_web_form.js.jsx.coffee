@@ -17,6 +17,7 @@
     @setState params: params
 
   paramsDidUpdate: (index, key, value) ->
+    console.log "key - #{key}; value - #{value}"
     @state.params[index].key = key
     @state.params[index].value = value
 
