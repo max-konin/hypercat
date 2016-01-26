@@ -46,8 +46,9 @@
       url: @state.url
       data: data
       method: @state.method
-    }).then (response) =>
+    }).then ( (response) =>
       @setState response: JSON.stringify(response, undefined, 2)
+    ), =>  @setState(response: 'Error')
 
   render: ->
     paramsNodes = @state.params.map (p) =>
