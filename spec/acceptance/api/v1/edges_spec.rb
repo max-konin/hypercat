@@ -33,7 +33,7 @@ resource 'Edges' do
       do_request
 
       expect(status).to eq 200
-      expect(response_body).to eq edge.to_json
+      expect(response_body).to eq ActiveModel::SerializableResource.new(edge).to_json
     end
   end
 

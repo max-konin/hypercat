@@ -25,7 +25,7 @@ resource 'Hypernets' do
       do_request
 
       expect(status).to eq 200
-      expect(response_body).to eq hypernet.to_json
+      expect(response_body).to eq ActiveModel::SerializableResource.new(hypernet).to_json
     end
   end
 
