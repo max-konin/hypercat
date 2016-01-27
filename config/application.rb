@@ -30,5 +30,6 @@ module Hypercat
     # config.i18n.default_locale = :de
     config.react.addons = true
     ActiveModel::Serializer.config.adapter = :json_api
+    ActiveModel::Serializer.config.jsonapi_resource_type = :singular
   end
 end
