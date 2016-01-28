@@ -43,7 +43,7 @@ resource 'Edges' do
     parameter :source_id, "Source node's ID", require: true, scope: :edge
     parameter :target_id, "Target node's ID", require: true, scope: :edge
 
-    let(:data) { {x: 1, y: 2} }
+    let(:data) { {x: 1, y: 2}.to_json }
     let(:source_node) {create :node}
     let(:target_node) {create :node}
     let(:source_id) {source_node.id.to_s}
@@ -84,13 +84,15 @@ resource 'Edges' do
     let(:target_id) {edge.target.id.to_s}
     let(:id){edge.id}
 
-    let(:data) {{'name' => 'last edge'}}
+    let(:data) {{'name' => 'last edge'}.to_json}
 
     example 'Update a edge' do
       explanation 'Update a edge'
 
 
-      expect{do_request}.to change{edge.reload.data}.to(data)
+      expect{do_request}.to change{
+        edge.reload.data[:name]
+      }.to('last edge')
       expect(status).to eq 204
     end
   end

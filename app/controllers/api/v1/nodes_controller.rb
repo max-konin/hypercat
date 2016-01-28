@@ -18,9 +18,7 @@ module Api
       end
 
       def permitted_params
-        params.require(:node).permit().tap do |whitelisted|
-          whitelisted[:data] = params[:node][:data]
-        end
+        {data: JSON.parse(params.require(:node)[:data]) }
       end
 
       def resource

@@ -18,9 +18,9 @@ module Api
       end
 
       def permitted_params
-        params.require(:edge).permit(:source_id, :target_id, :graph_id).tap do |whitelisted|
-          whitelisted[:data] = params[:edge][:data]
-        end
+        res = params.require(:edge).permit(:source_id, :target_id, :graph_id)
+        res[:data] = JSON.parse(params.require(:edge)[:data])
+        res
       end
 
       def resource

@@ -41,13 +41,13 @@ resource 'Nodes' do
     parameter :data, "Custom JSON data", scope: :node
     parameter :hypernet_id, "Hypernet's ID", required: true
 
-    let(:data) { {x: 1, y: 2} }
+    let(:data) { {x: 1, y: 2}.to_json}
 
     example 'Creating a node' do
       explanation 'Create new hypernet in DB'
 
       expect(params).to eq ({
-        'node' => {'data' => {x: 1, y: 2}},
+        'node' => {'data' => ({x: 1, y: 2}).to_json},
         'hypernet_id' => hypernet_id
       })
 
@@ -79,13 +79,13 @@ resource 'Nodes' do
     let!(:node){create :node, hypernet: hypernet, data: {name: 'first node'}}
     let(:id){node.id}
 
-    let(:data) {{'name' => 'last node'}}
+    let(:data) {{'name' => 'last node'}.to_json}
 
     example 'Update a node' do
       explanation 'Update a node'
 
 
-      expect{do_request}.to change{node.reload.data}.to(data)
+      expect{do_request}.to change{node.reload.data[:name]}.to('last node')
       expect(status).to eq 204
     end
   end
