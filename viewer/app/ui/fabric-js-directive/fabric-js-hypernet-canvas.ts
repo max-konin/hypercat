@@ -60,7 +60,7 @@ export class FabricJSHypernetCanvas implements HypernetCanvas {
         
         var p = new fabric.Circle({
             radius: 15,
-            fill: "green",
+            fill: "blue",
             left: cx,
             top: cy
         });
