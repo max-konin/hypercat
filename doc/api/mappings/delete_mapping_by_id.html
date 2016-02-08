@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hypernets API</title>
+    <title>Mappings API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,13 +106,13 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Hypernets API</h1>
+      <h1>Mappings API</h1>
 
       <div class="article">
-        <h2>Get a hypernet by id</h2>
-        <h3>GET /api/v1/hypernets/:id.json</h3>
+        <h2>Delete mapping by ID</h2>
+        <h3>DELETE /api/v1/mappings/:id.json</h3>
           <p class="explanation">
-            Returns a hypernet by ID
+            Delete a hypernet by ID
           </p>
 
           <h3>Parameters</h3>
@@ -129,6 +129,14 @@ table th, table td {
                     <span class="name">id</span>
                 </td>
                 <td>
+                  <span class="description">Mapping&#39;s ID</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">hypernet_id</span>
+                </td>
+                <td>
                   <span class="description">Hypernet&#39;s ID</span>
                 </td>
               </tr>
@@ -140,24 +148,16 @@ table th, table td {
 
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /api/v1/hypernets/56b836c235410e1e0c000034.json</pre>
+          <pre class="request route highlight">DELETE /api/v1/mappings/56b836c235410e1e0c000063.json</pre>
 
 
+            <h4>Body</h4>
+            <pre class="request body">hypernet_id=56b836c235410e1e0c000062</pre>
 
 
             <h3>Response</h3>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
-              <h4>Body</h4>
-              <pre class="response body">{
-  &quot;data&quot;: {
-    &quot;id&quot;: &quot;56b836c235410e1e0c000034&quot;,
-    &quot;type&quot;: &quot;hypernet&quot;,
-    &quot;attributes&quot;: {
-      &quot;name&quot;: &quot;example&quot;
-    }
-  }
-}</pre>
       </div>
     </div>
   </body>

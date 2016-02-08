@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hypernets API</title>
+    <title>Mappings API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,13 +106,13 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Hypernets API</h1>
+      <h1>Mappings API</h1>
 
       <div class="article">
-        <h2>Get a hypernet by id</h2>
-        <h3>GET /api/v1/hypernets/:id.json</h3>
+        <h2>Listing mappings in hypernet</h2>
+        <h3>GET /api/v1/mappings.json</h3>
           <p class="explanation">
-            Returns a hypernet by ID
+            Returns list of mapping in hypernet
           </p>
 
           <h3>Parameters</h3>
@@ -126,7 +126,7 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
-                    <span class="name">id</span>
+                    <span class="name">hypernet_id</span>
                 </td>
                 <td>
                   <span class="description">Hypernet&#39;s ID</span>
@@ -140,8 +140,10 @@ table th, table td {
 
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /api/v1/hypernets/56b836c235410e1e0c000034.json</pre>
+          <pre class="request route highlight">GET /api/v1/mappings.json?hypernet_id=56b836c235410e1e0c000038</pre>
 
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">hypernet_id: 56b836c235410e1e0c000038</pre>
 
 
 
@@ -150,13 +152,30 @@ table th, table td {
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;data&quot;: {
-    &quot;id&quot;: &quot;56b836c235410e1e0c000034&quot;,
-    &quot;type&quot;: &quot;hypernet&quot;,
-    &quot;attributes&quot;: {
-      &quot;name&quot;: &quot;example&quot;
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;56b836c235410e1e0c000039&quot;,
+      &quot;type&quot;: &quot;mapping&quot;,
+      &quot;attributes&quot;: {
+        &quot;branch_id&quot;: &quot;56b836c235410e1e0c00003c&quot;,
+        &quot;hypernet_id&quot;: &quot;56b836c235410e1e0c000038&quot;,
+        &quot;edge_ids&quot;: [
+
+        ]
+      }
+    },
+    {
+      &quot;id&quot;: &quot;56b836c235410e1e0c000041&quot;,
+      &quot;type&quot;: &quot;mapping&quot;,
+      &quot;attributes&quot;: {
+        &quot;branch_id&quot;: &quot;56b836c235410e1e0c000044&quot;,
+        &quot;hypernet_id&quot;: &quot;56b836c235410e1e0c000038&quot;,
+        &quot;edge_ids&quot;: [
+
+        ]
+      }
     }
-  }
+  ]
 }</pre>
       </div>
     </div>
