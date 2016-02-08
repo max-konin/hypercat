@@ -60,10 +60,15 @@
       <div>Response: </div>
       <pre>{this.state.response}</pre>
       <div className="ui form">
-
         <div className="field">
           <label>Method:</label>
-          <input type="text" valueLink={this.linkState('method')}/>
+          <select type="text" valueLink={this.linkState('method')}>
+            <option>GET</option>
+            <option>POST</option>
+            <option>PUT</option>
+            <option>PATCH</option>
+            <option>DELETE</option>
+          </select>
         </div>
 
         <div className="field">
