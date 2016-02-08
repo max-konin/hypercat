@@ -31,6 +31,14 @@ export module GraphComponents {
         public get y(): number {
             return this._y;
         }
+        
+        public set x(x: number) {
+            this._x = x;
+        }
+
+        public set y(y: number) {
+            this._y = y;
+        }
 
         public get id(): string {
             return this._id;
@@ -107,6 +115,18 @@ export module GraphComponents {
         
         public get vertices() : Map<string, Vertex> {
             return this._vertices;
+        }
+        
+        public getFromEdges(vertex: Vertex) : Edge[] {
+            return this._edges.filter((edge) => edge.from == vertex);
+        }
+        
+        public getToEdges(vertex: Vertex) : Edge[]{
+            return this._edges.filter((edge) => edge.to == vertex)
+        }
+        
+        public getAdjacent(vertex: Vertex): Edge[]{
+            return this._edges.filter((edge) => edge.to == vertex || edge.from == vertex);
         }
     }
 
