@@ -9,6 +9,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc3'
 
 gem 'mongoid'
 
+gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'

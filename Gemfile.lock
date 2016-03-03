@@ -52,6 +52,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bson (3.2.6)
@@ -84,6 +85,13 @@ GEM
     connection_pool (2.2.0)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
+    devise (3.5.6)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -125,6 +133,7 @@ GEM
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     origin (2.1.1)
+    orm_adapter (0.5.0)
     puma (2.15.3)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -228,6 +237,8 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -247,6 +258,7 @@ DEPENDENCIES
   capistrano3-puma
   coffee-rails (~> 4.1.0)
   database_cleaner
+  devise
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
@@ -270,4 +282,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
