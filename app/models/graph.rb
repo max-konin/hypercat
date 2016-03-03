@@ -6,4 +6,5 @@ class Graph
   belongs_to :hypernet
 
   has_many :edges, dependent: :destroy
+  validates_presence_of :name
 end

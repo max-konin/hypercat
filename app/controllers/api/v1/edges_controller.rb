@@ -18,8 +18,9 @@ module Api
       end
 
       def permitted_params
-        res = params.require(:edge).permit(:source_id, :target_id, :graph_id)
-        res[:data] = JSON.parse(params.require(:edge)[:data])
+        res = params.require(:edge).permit(:source_id, :target_id, :graph_id, :name)
+        data = params.require(:edge)[:data]
+        res[:data] = JSON.parse(data) unless data.blank?
         res
       end
 

@@ -42,12 +42,14 @@ resource 'Edges' do
     parameter :graph_id, "Graph's ID", required: true
     parameter :source_id, "Source node's ID", require: true, scope: :edge
     parameter :target_id, "Target node's ID", require: true, scope: :edge
+    parameter :name, "Edge's name", require: true, scope: :edge
 
     let(:data) { {x: 1, y: 2}.to_json }
     let(:source_node) {create :node}
     let(:target_node) {create :node}
     let(:source_id) {source_node.id.to_s}
     let(:target_id) {target_node.id.to_s}
+    let(:name) { 'e' }
 
     example 'Creating a edge' do
       explanation 'Create new graph in DB'

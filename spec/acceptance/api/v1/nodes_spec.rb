@@ -40,16 +40,13 @@ resource 'Nodes' do
   post '/api/v1/nodes.json' do
     parameter :data, "Custom JSON data", scope: :node
     parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :name, "Node's name", required: true, scope: :node
 
     let(:data) { {x: 1, y: 2}.to_json}
+    let(:name) { 'v' }
 
     example 'Creating a node' do
       explanation 'Create new hypernet in DB'
-
-      expect(params).to eq ({
-        'node' => {'data' => ({x: 1, y: 2}).to_json},
-        'hypernet_id' => hypernet_id
-      })
 
       expect{do_request}.to change{Node.count}.by(1)
 

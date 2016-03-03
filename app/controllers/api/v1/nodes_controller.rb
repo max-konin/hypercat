@@ -18,7 +18,10 @@ module Api
       end
 
       def permitted_params
-        {data: JSON.parse(params.require(:node)[:data]) }
+        res = params.require(:node).permit(:name)
+        data = params.require(:node)[:data]
+        res[:data] = JSON.parse(data) unless data.blank?
+        res
       end
 
       def resource
