@@ -18,7 +18,7 @@ module Api
       end
 
       def permitted_params
-        res = params.require(:node).permit(:name)
+        res = params.require(:node).permit(:name, geometry: [:_type, :x, :y])
         data = params.require(:node)[:data]
         res[:data] = JSON.parse(data) unless data.blank?
         res

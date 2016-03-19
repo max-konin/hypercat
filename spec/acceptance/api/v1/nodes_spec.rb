@@ -41,9 +41,11 @@ resource 'Nodes' do
     parameter :data, "Custom JSON data", scope: :node
     parameter :hypernet_id, "Hypernet's ID", required: true
     parameter :name, "Node's name", required: true, scope: :node
+    parameter :geometry, scope: :node
 
     let(:data) { {x: 1, y: 2}.to_json}
     let(:name) { 'v' }
+    let(:geometry) { {_type: 'Geometry::Point', x: 1, y: 2} }
 
     example 'Creating a node' do
       explanation 'Create new hypernet in DB'
