@@ -63,4 +63,4 @@ else
   set :password, ask('Server password:', nil, echo: false)
 end
 
-before 'deploy:publishing', 'viewer:build'
+before 'deploy:publishing', 'viewer-ag:build'

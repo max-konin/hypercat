@@ -7,6 +7,8 @@ gem 'rails-api'
 gem 'responders'
 gem 'active_model_serializers', '~> 0.10.0.rc3'
 
+gem 'ember-cli-rails'
+
 gem 'mongoid'
 
 gem 'devise'

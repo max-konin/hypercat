@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  mount_ember_app :viewer, to: "/viewer"
+
   namespace :api do
     get 'sandbox' => 'sandbox#index'
     namespace :v1 do
