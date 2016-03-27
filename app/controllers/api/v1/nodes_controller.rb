@@ -9,7 +9,6 @@ module Api
       end
 
       def set_resource
-        set_hypernet
         super
       end
 
@@ -25,7 +24,7 @@ module Api
       end
 
       def resource
-        @hypernet.nodes.find params[:id]
+        Node.find params[:id]
       end
 
       def resources

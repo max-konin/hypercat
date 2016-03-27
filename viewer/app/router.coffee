@@ -4,7 +4,9 @@
 Router = Ember.Router.extend
   location: config.locationType
 
-
 Router.map ->
-
+  @route 'hypernets'
+  @route 'hypernet', path: '/hypernets/:id', ->
+    @route 'nodes', ->
+      @route 'node', path: ':node_id'
 `export default Router`

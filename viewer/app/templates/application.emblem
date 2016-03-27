@@ -1,3 +1,10 @@
-| Hi
+.ui.left.fixed.inverted.vertical.labeled.icon.menu
+  .main-top-margin
+    = liquid-outlet 'left-menu'
 
-= outlet
+.ui.top.fixed.inverted.menu
+  link-to 'hypernets' class='item'
+    i.block.layout.icon
+    | Nets
+.main-top-margin.main-left-margin
+  = liquid-outlet

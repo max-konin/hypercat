@@ -1,0 +1,11 @@
+.ui.black.segment
+  h4.ui.header
+    | Node&nbsp;
+    = node.name
+  table.ui.definition.table
+    tr
+      td id
+      td = node.id
+    tr
+      td Name
+      td = node.name
