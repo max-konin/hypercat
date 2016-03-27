@@ -1,23 +1,20 @@
 module Api
   module V1
     class NodesController < BaseController
-      before_action :set_hypernet, only: [:index, :create]
+      before_action :set_hypernet, only: [:index]
 
       private
       def build_new_resource(params)
-        @hypernet.nodes.new params
+        Node.new params
       end
 
-      def set_resource
-        super
-      end
 
       def set_hypernet
         @hypernet = Hypernet.find params[:hypernet_id]
       end
 
       def permitted_params
-        res = params.require(:node).permit(:name, geometry: [:_type, :x, :y])
+        res = params.require(:node).permit(:name, :hypernet_id, geometry: [:_type, :x, :y])
         data = params.require(:node)[:data]
         res[:data] = JSON.parse(data) unless data.blank?
         res

@@ -4,5 +4,7 @@ module Geometry
     include Mongoid::Attributes::Dynamic
 
     field :_type
+
+    embedded_in :geometrable, polymorphic: true
   end
 end

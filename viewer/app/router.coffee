@@ -8,5 +8,8 @@ Router.map ->
   @route 'hypernets'
   @route 'hypernet', path: '/hypernets/:id', ->
     @route 'nodes', ->
-      @route 'node', path: ':node_id'
+      @route 'new'
+      @route 'node', path: ':node_id', ->
+        @route 'edit'
+
 `export default Router`

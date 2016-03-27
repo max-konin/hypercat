@@ -1,11 +1,29 @@
-.ui.black.segment
-  h4.ui.header
-    | Node&nbsp;
-    = node.name
+h4.ui.left.floated.header
+  | Node&nbsp;
+  = node.name
+
+table.ui.definition.table
+  tr
+    td id
+    td = node.id
+  tr
+    td Name
+    td = node.name
+
+if node.geometry
+  h5.ui.header Geometry
+
   table.ui.definition.table
     tr
-      td id
-      td = node.id
+      td Geometry Type
+      td Point
     tr
-      td Name
-      td = node.name
+      td x
+      td = node.geometry.x
+    tr
+      td y
+      td = node.geometry.y
+
+link-to 'hypernet.nodes.node.edit' class='ui icon right floated labeled primary button' tagName='button'
+  i.pencil.icon
+  | Edit

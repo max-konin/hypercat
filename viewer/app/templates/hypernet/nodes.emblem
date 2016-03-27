@@ -16,3 +16,6 @@ h2.ui.header
             td = node.name
   .six.wide.colomn
     = liquid-outlet 'properties'
+
+link-to 'hypernet.nodes.new' tagName='button' class='ui primary button'
+  | Add new

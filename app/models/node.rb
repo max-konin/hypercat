@@ -5,7 +5,7 @@ class Node
   field :data, type: Hash
 
   belongs_to :hypernet
-  embeds_one :geometry, class_name: 'Geometry::Base'
+  embeds_one :geometry, class_name: 'Geometry::Base', as: :geometrable
 
   accepts_nested_attributes_for :geometry
 
