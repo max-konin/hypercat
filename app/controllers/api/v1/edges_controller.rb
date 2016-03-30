@@ -1,16 +1,11 @@
 module Api
   module V1
     class EdgesController < BaseController
-      before_action :set_graph, only: [:index, :create]
+      before_action :set_graph, only: [:index]
 
       private
       def build_new_resource(params)
-        @graph.edges.new params
-      end
-
-      def set_resource
-        set_graph
-        super
+        Edge.new params
       end
 
       def set_graph
@@ -25,7 +20,7 @@ module Api
       end
 
       def resource
-        @graph.edges.find params[:id]
+        Edge.find params[:id]
       end
 
       def resources

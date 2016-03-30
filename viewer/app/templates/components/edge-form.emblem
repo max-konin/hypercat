@@ -1,0 +1,24 @@
+form.ui.form{action 'save' on='submit'}
+  h4.ui.header
+    if edge.isNew
+      | Create a new edge
+    else
+      | Edit edge&nbsp;
+      = edge.name
+
+  table.ui.definition.table
+    tr
+      td Name
+      td class=edge.errors.name:error
+        = input value=edge.name
+    tr
+      td Source node
+      td class=edge.errors.source:error
+        ember-selectize content=nodes selection=edge.source optionValuePath="content.id" optionLabelPath="content.name"
+    tr
+      td Target node
+      td class=edge.errors.target:error
+        ember-selectize content=nodes selection=edge.target optionValuePath="content.id" optionLabelPath="content.name"
+
+  button.ui.primary.button type='submit'
+    | Save

@@ -7,6 +7,14 @@ Router = Ember.Router.extend
 Router.map ->
   @route 'hypernets'
   @route 'hypernet', path: '/hypernets/:id', ->
+    @route 'graphs', ->
+      @route 'new'
+    @route 'graph', path: 'graphs/:graph_id', ->
+      @route 'edges', ->
+        @route 'new'
+      @route 'edge', ->
+        @route 'edit'
+
     @route 'nodes', ->
       @route 'new'
       @route 'node', path: ':node_id', ->
