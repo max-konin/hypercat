@@ -32,7 +32,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 3
 
 # Puma conf
 set :puma_user, fetch(:user)
@@ -64,3 +64,6 @@ else
 end
 
 before 'deploy:publishing', 'ember:copy_assets'
+after 'deploy:publishing', 'deploy:restart'
+after 'deploy:assets:precompile', 'deploy:cleanup_assets'
+after 'deploy:assets:precompile', 'ember:copy_assets'
