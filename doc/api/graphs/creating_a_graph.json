@@ -1,0 +1,42 @@
+{
+  "resource": "Graphs",
+  "http_method": "POST",
+  "route": "/api/v1/graphs.json",
+  "description": "Creating a graph",
+  "explanation": "Create new hypernet in DB",
+  "parameters": [
+    {
+      "required": true,
+      "scope": "graph",
+      "name": "name",
+      "description": "Graph's name"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/graphs.json",
+      "request_body": "graph[name]=G&hypernet_id=57665cf344f575d98e00002d",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"graph\": {\n    \"id\": \"57665cf344f575d98e00002e\",\n    \"name\": \"G\",\n    \"hypernet_id\": null,\n    \"edge_ids\": [\n\n    ],\n    \"node_ids\": [\n\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

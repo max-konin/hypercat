@@ -1,0 +1,37 @@
+{
+  "resource": "Nodes",
+  "http_method": "GET",
+  "route": "/api/v1/nodes.json",
+  "description": "Listing nodes in hypernet",
+  "explanation": "Returns list of node in hypernet",
+  "parameters": [
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/nodes.json?hypernet_id=57665cf444f575d98e000082",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "hypernet_id": "57665cf444f575d98e000082"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"nodes\": [\n    {\n      \"id\": \"57665cf444f575d98e000083\",\n      \"data\": {\n        \"name\": \"first node\"\n      },\n      \"name\": \"V\",\n      \"geometry\": null,\n      \"hypernet_id\": \"57665cf444f575d98e000082\"\n    },\n    {\n      \"id\": \"57665cf444f575d98e000084\",\n      \"data\": {\n        \"name\": \"second node\"\n      },\n      \"name\": \"V\",\n      \"geometry\": null,\n      \"hypernet_id\": \"57665cf444f575d98e000082\"\n    }\n  ]\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

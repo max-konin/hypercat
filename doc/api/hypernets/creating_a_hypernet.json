@@ -1,0 +1,36 @@
+{
+  "resource": "Hypernets",
+  "http_method": "POST",
+  "route": "/api/v1/hypernets.json",
+  "description": "Creating a hypernet",
+  "explanation": "Create new hypernet in DB",
+  "parameters": [
+    {
+      "scope": "hypernet",
+      "name": "name",
+      "description": "Hypernet's name"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/hypernets.json",
+      "request_body": "hypernet[name]=My+hypernet",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"hypernet\": {\n    \"id\": \"57665cf344f575d98e000035\",\n    \"name\": \"My hypernet\",\n    \"node_ids\": [\n\n    ],\n    \"graph_ids\": [\n\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -5,5 +5,5 @@ class Hypernet
 
   has_many :nodes, dependent: :destroy
   has_many :graphs, dependent: :destroy
-  has_many :mappings, dependent: :destroy
+  has_many :edges_mappings, dependent: :destroy
 end

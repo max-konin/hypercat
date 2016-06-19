@@ -3,5 +3,5 @@ class GraphSerializer < ActiveModel::Serializer
 
   embed :ids
 
-  has_many :edges
+  has_many :edges, :nodes
 end

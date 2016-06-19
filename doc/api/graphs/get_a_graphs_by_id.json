@@ -1,0 +1,42 @@
+{
+  "resource": "Graphs",
+  "http_method": "GET",
+  "route": "/api/v1/graphs/:id.json",
+  "description": "Get a graphs by id",
+  "explanation": "Returns a graphs by ID",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Graph's ID"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/graphs/57665cf344f575d98e00002c.json?hypernet_id=57665cf344f575d98e00002b",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "hypernet_id": "57665cf344f575d98e00002b"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"graph\": {\n    \"id\": \"57665cf344f575d98e00002c\",\n    \"name\": \"G\",\n    \"hypernet_id\": \"57665cf344f575d98e00002b\",\n    \"edge_ids\": [\n\n    ],\n    \"node_ids\": [\n\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

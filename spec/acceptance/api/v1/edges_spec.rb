@@ -33,13 +33,13 @@ resource 'Edges' do
       do_request
 
       expect(status).to eq 200
-      expect(response_body).to eq ActiveModel::SerializableResource.new(edge).to_json
+      expect(response_body).to eq EdgeSerializer.new(edge).to_json
     end
   end
 
   post '/api/v1/edges.json' do
     parameter :data, "Custom JSON data", scope: :edge
-    parameter :graph_id, "Graph's ID", required: true
+    parameter :graph_id, "Graph's ID", required: true, scope: :edge
     parameter :source_id, "Source node's ID", require: true, scope: :edge
     parameter :target_id, "Target node's ID", require: true, scope: :edge
     parameter :name, "Edge's name", require: true, scope: :edge

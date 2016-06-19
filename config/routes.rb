@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :edges
       resources :graphs
       resources :hypernets
-      resources :mappings
+      resources :edges_mappings
       resources :nodes
     end
   end

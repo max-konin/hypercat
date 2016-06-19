@@ -33,13 +33,13 @@ resource 'Nodes' do
       do_request
 
       expect(status).to eq 200
-      expect(response_body).to eq ActiveModel::SerializableResource.new(node).to_json
+      expect(response_body).to eq NodeSerializer.new(node).to_json
     end
   end
 
   post '/api/v1/nodes.json' do
     parameter :data, "Custom JSON data", scope: :node
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :hypernet_id, "Hypernet's ID", required: true, scope: :node
     parameter :name, "Node's name", required: true, scope: :node
     parameter :geometry, scope: :node
 

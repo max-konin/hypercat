@@ -1,0 +1,36 @@
+{
+  "resource": "Hypernets",
+  "http_method": "GET",
+  "route": "/api/v1/hypernets/:id.json",
+  "description": "Get a hypernet by id",
+  "explanation": "Returns a hypernet by ID",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/hypernets/57665cf344f575d98e000034.json",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"hypernet\": {\n    \"id\": \"57665cf344f575d98e000034\",\n    \"name\": \"example\",\n    \"node_ids\": [\n\n    ],\n    \"graph_ids\": [\n\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

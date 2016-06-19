@@ -1,0 +1,204 @@
+{
+  "resources": [
+    {
+      "name": "Edges",
+      "examples": [
+        {
+          "description": "Creating a edge",
+          "link": "edges/creating_a_edge.json",
+          "groups": "all",
+          "route": "/api/v1/edges.json",
+          "method": "post"
+        },
+        {
+          "description": "Delete edge by ID",
+          "link": "edges/delete_edge_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/edges/:id.json",
+          "method": "delete"
+        },
+        {
+          "description": "Get a edges by id",
+          "link": "edges/get_a_edges_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/edges/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Listing edges in graph",
+          "link": "edges/listing_edges_in_graph.json",
+          "groups": "all",
+          "route": "/api/v1/edges.json",
+          "method": "get"
+        },
+        {
+          "description": "Update a edge",
+          "link": "edges/update_a_edge.json",
+          "groups": "all",
+          "route": "/api/v1/edges/:id.json",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Edges Mappings",
+      "examples": [
+        {
+          "description": "Creating a mapping",
+          "link": "edges_mappings/creating_a_mapping.json",
+          "groups": "all",
+          "route": "/api/v1/edges_mappings.json",
+          "method": "post"
+        },
+        {
+          "description": "Delete mapping by ID",
+          "link": "edges_mappings/delete_mapping_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/edges_mappings/:id.json",
+          "method": "delete"
+        },
+        {
+          "description": "Get a mappings by id",
+          "link": "edges_mappings/get_a_mappings_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/edges_mappings/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Listing mappings in hypernet",
+          "link": "edges_mappings/listing_mappings_in_hypernet.json",
+          "groups": "all",
+          "route": "/api/v1/edges_mappings.json",
+          "method": "get"
+        },
+        {
+          "description": "Update a mapping",
+          "link": "edges_mappings/update_a_mapping.json",
+          "groups": "all",
+          "route": "/api/v1/edges_mappings/:id.json",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Graphs",
+      "examples": [
+        {
+          "description": "Creating a graph",
+          "link": "graphs/creating_a_graph.json",
+          "groups": "all",
+          "route": "/api/v1/graphs.json",
+          "method": "post"
+        },
+        {
+          "description": "Delete graph by ID",
+          "link": "graphs/delete_graph_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/graphs/:id.json",
+          "method": "delete"
+        },
+        {
+          "description": "Get a graphs by id",
+          "link": "graphs/get_a_graphs_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/graphs/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Listing graphs in hypernet",
+          "link": "graphs/listing_graphs_in_hypernet.json",
+          "groups": "all",
+          "route": "/api/v1/graphs.json",
+          "method": "get"
+        },
+        {
+          "description": "Update a graph",
+          "link": "graphs/update_a_graph.json",
+          "groups": "all",
+          "route": "/api/v1/graphs/:id.json",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Hypernets",
+      "examples": [
+        {
+          "description": "Creating a hypernet",
+          "link": "hypernets/creating_a_hypernet.json",
+          "groups": "all",
+          "route": "/api/v1/hypernets.json",
+          "method": "post"
+        },
+        {
+          "description": "Delete hypernet by ID",
+          "link": "hypernets/delete_hypernet_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/hypernets/:id.json",
+          "method": "delete"
+        },
+        {
+          "description": "Get a hypernet by id",
+          "link": "hypernets/get_a_hypernet_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/hypernets/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Listing hypernets",
+          "link": "hypernets/listing_hypernets.json",
+          "groups": "all",
+          "route": "/api/v1/hypernets.json",
+          "method": "get"
+        },
+        {
+          "description": "Update a hypernet",
+          "link": "hypernets/update_a_hypernet.json",
+          "groups": "all",
+          "route": "/api/v1/hypernets/:id.json",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Nodes",
+      "examples": [
+        {
+          "description": "Creating a node",
+          "link": "nodes/creating_a_node.json",
+          "groups": "all",
+          "route": "/api/v1/nodes.json",
+          "method": "post"
+        },
+        {
+          "description": "Delete node by ID",
+          "link": "nodes/delete_node_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/nodes/:id.json",
+          "method": "delete"
+        },
+        {
+          "description": "Get a nodes by id",
+          "link": "nodes/get_a_nodes_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/nodes/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Listing nodes in hypernet",
+          "link": "nodes/listing_nodes_in_hypernet.json",
+          "groups": "all",
+          "route": "/api/v1/nodes.json",
+          "method": "get"
+        },
+        {
+          "description": "Update a node",
+          "link": "nodes/update_a_node.json",
+          "groups": "all",
+          "route": "/api/v1/nodes/:id.json",
+          "method": "put"
+        }
+      ]
+    }
+  ]
+}

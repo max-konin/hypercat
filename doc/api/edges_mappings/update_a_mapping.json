@@ -1,0 +1,47 @@
+{
+  "resource": "Edges Mappings",
+  "http_method": "PUT",
+  "route": "/api/v1/edges_mappings/:id.json",
+  "description": "Update a mapping",
+  "explanation": "Update a mapping",
+  "parameters": [
+    {
+      "scope": "edges_mapping",
+      "required": true,
+      "name": "branch_id",
+      "description": "Edge of a primary network"
+    },
+    {
+      "scope": "edges_mapping",
+      "name": "edge_ids",
+      "description": "Edges of a secondary network"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/edges_mappings/57665cf344f575d98e00006c.json",
+      "request_body": "edges_mapping[branch_id]=57665cf344f575d98e000076&edges_mapping[edge_ids][]=57665cf344f575d98e00007d&hypernet_id=57665cf344f575d98e00006b",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+      },
+      "response_content_type": null,
+      "curl": null
+    }
+  ]
+}

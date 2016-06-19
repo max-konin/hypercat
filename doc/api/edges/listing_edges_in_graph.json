@@ -1,0 +1,37 @@
+{
+  "resource": "Edges",
+  "http_method": "GET",
+  "route": "/api/v1/edges.json",
+  "description": "Listing edges in graph",
+  "explanation": "Returns list of edge in graph",
+  "parameters": [
+    {
+      "required": true,
+      "name": "graph_id",
+      "description": "Graph's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/edges.json?graph_id=57665cf244f575d98e000001",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "graph_id": "57665cf244f575d98e000001"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"edges\": [\n    {\n      \"id\": \"57665cf244f575d98e000002\",\n      \"data\": {\n        \"name\": \"first edge\"\n      },\n      \"target_id\": \"57665cf244f575d98e000004\",\n      \"source_id\": \"57665cf244f575d98e000006\",\n      \"graph_id\": \"57665cf244f575d98e000001\",\n      \"name\": \"E\"\n    },\n    {\n      \"id\": \"57665cf244f575d98e000007\",\n      \"data\": {\n        \"name\": \"second edge\"\n      },\n      \"target_id\": \"57665cf244f575d98e000009\",\n      \"source_id\": \"57665cf244f575d98e00000b\",\n      \"graph_id\": \"57665cf244f575d98e000001\",\n      \"name\": \"E\"\n    }\n  ]\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
