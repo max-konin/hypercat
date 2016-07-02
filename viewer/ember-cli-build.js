@@ -10,6 +10,7 @@ module.exports = function(defaults) {
   });
 
   app.import('bower_components/fabric.js/dist/fabric.js');
+  app.import('bower_components/vivagraphjs/dist/vivagraph.js');
 
   return app.toTree();
 };

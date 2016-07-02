@@ -1,0 +1,22 @@
+.ui.grid
+  .ten.wide.column
+    h3.ui.header Edges:
+    table.ui.table
+      thead
+        tr
+          th ID
+          th Name
+          th Source
+          th Target
+      tbody
+        = each model as |edge|
+          link-to 'hypernet.graph.edges.edge' edge.id tagName='tr'
+            td = edge.id
+            td = edge.name
+            td = edge.source.name
+            td = edge.target.name
+  .six.wide.colomn
+    = liquid-outlet
+
+link-to 'hypernet.graph.edges.new' tagName='button' class='ui primary button'
+  | Add a new edge

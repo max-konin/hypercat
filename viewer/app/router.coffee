@@ -10,14 +10,16 @@ Router.map ->
     @route 'graphs', ->
       @route 'new'
     @route 'graph', path: 'graphs/:graph_id', ->
+      @route 'view'
       @route 'edges', ->
         @route 'new'
-      @route 'edge', ->
-        @route 'edit'
+        @route 'edge', ->
+          @route 'edit'
 
     @route 'nodes', ->
       @route 'new'
       @route 'node', path: ':node_id', ->
         @route 'edit'
+  @route 'test_graph'
 
 `export default Router`
