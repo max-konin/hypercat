@@ -19,3 +19,5 @@ h2.ui.header
 
 link-to 'hypernet.graphs.new' tagName='button' class='ui primary button'
   | Add a new graph
+link-to 'hypernet.graphs.generate' tagName='button' class='ui primary button'
+  | Generate from templates

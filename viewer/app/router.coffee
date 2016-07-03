@@ -9,6 +9,7 @@ Router.map ->
   @route 'hypernet', path: '/hypernets/:id', ->
     @route 'graphs', ->
       @route 'new'
+      @route 'generate'
     @route 'graph', path: 'graphs/:graph_id', ->
       @route 'view'
       @route 'edges', ->
