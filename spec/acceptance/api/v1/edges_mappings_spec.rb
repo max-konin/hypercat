@@ -1,18 +1,19 @@
 require 'rails_helper'
 
 resource 'Edges Mappings' do
-  let!(:hypernet){create :hypernet, name: 'example'}
-  let(:hypernet_id){hypernet.id}
+  let!(:hypernet)      { create :hypernet, name: 'example' }
+  let(:graphs_mapping) { create :graphs_mapping, hypernet: hypernet }
+  let(:graphs_mapping_id) { graphs_mapping.id }
 
   get '/api/v1/edges_mappings.json' do
-    let!(:mapping_1){create :edges_mapping, hypernet: hypernet}
-    let!(:mapping_2){create :edges_mapping, hypernet: hypernet}
+    let!(:mapping_1){create :edges_mapping, graphs_mapping: graphs_mapping}
+    let!(:mapping_2){create :edges_mapping, graphs_mapping: graphs_mapping}
 
 
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :graphs_mapping_id, "Mapping's ID", required: true
 
-    example "Listing mappings in hypernet" do
-      explanation 'Returns list of mapping in hypernet'
+    example "Listing edges mappings in GraphMapping" do
+      explanation 'Returns list of edges mapping in GraphMapping'
 
       do_request
 
@@ -22,9 +23,9 @@ resource 'Edges Mappings' do
 
   get '/api/v1/edges_mappings/:id.json' do
     parameter :id, "Mapping's ID", required: true
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :mapping_id, "Mapping's ID", required: true
 
-    let!(:mapping){create :edges_mapping, hypernet: hypernet}
+    let!(:mapping){create :edges_mapping, graphs_mapping: graphs_mapping}
     let(:id){mapping.id}
 
     example 'Get a mappings by id' do
@@ -40,7 +41,7 @@ resource 'Edges Mappings' do
   post '/api/v1/edges_mappings.json' do
     parameter :branch_id, "Edge of a primary network", scope: :edges_mapping, required: true
     parameter :edge_ids, "Edges of a secondary network", scope: :edges_mapping
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :graphs_mapping_id, "Graphs Mapping's ID", scope: :edges_mapping, required: true
 
     let(:edge_ids) { [(create :edge).id]}
     let(:branch_id) { (create :edge).id }
@@ -55,9 +56,9 @@ resource 'Edges Mappings' do
 
   delete '/api/v1/edges_mappings/:id.json' do
     parameter :id, "Mapping's ID", required: true
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :graphs_mapping_id, "Graphs Mapping's ID", required: true
 
-    let!(:mapping){create :edges_mapping, hypernet: hypernet}
+    let!(:mapping){create :edges_mapping, graphs_mapping: graphs_mapping}
     let(:id){mapping.id}
 
     example 'Delete mapping by ID' do
@@ -70,12 +71,12 @@ resource 'Edges Mappings' do
   put '/api/v1/edges_mappings/:id.json' do
     parameter :branch_id, "Edge of a primary network", scope: :edges_mapping, required: true
     parameter :edge_ids, "Edges of a secondary network", scope: :edges_mapping
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :graphs_mapping_id, "GraphsMapping's ID", required: true
 
     let(:edge_ids) { [(create :edge).id]}
     let(:branch_id) { (create :edge).id }
 
-    let!(:mapping){create :edges_mapping, hypernet: hypernet}
+    let!(:mapping){create :edges_mapping, graphs_mapping: graphs_mapping}
     let(:id){mapping.id}
 
     let(:data) {{'name' => 'last mapping'}.to_json}

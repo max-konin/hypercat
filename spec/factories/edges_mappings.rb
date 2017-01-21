@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :edges_mapping do
-    association :hypernet
+    association :graphs_mapping
     association :branch, factory: :edge
   end
 end
