@@ -13,3 +13,8 @@
 /tmp
 
 /.idea
+
+# Viewer
+/viewer/node_modules
+/viewer/bower_components
+/viewer/tmp

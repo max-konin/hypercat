@@ -1,0 +1,42 @@
+{
+  "resource": "Nodes",
+  "http_method": "GET",
+  "route": "/api/v1/nodes/:id.json",
+  "description": "Get a nodes by id",
+  "explanation": "Returns a nodes by ID",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Node's ID"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/nodes/57665cf444f575d98e000086.json?hypernet_id=57665cf444f575d98e000085",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "hypernet_id": "57665cf444f575d98e000085"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"node\": {\n    \"id\": \"57665cf444f575d98e000086\",\n    \"data\": {\n      \"name\": \"first node\"\n    },\n    \"name\": \"V\",\n    \"geometry\": null,\n    \"hypernet_id\": \"57665cf444f575d98e000085\"\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+h2.ui.header
+  | Graph&nbsp;
+  = model.name
+
+= liquid-outlet

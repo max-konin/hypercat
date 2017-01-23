@@ -1,0 +1,58 @@
+{
+  "resource": "Edges",
+  "http_method": "PUT",
+  "route": "/api/v1/edges/:id.json",
+  "description": "Update a edge",
+  "explanation": "Update a edge",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Graph's ID"
+    },
+    {
+      "scope": "edge",
+      "name": "data",
+      "description": "Custom JSON data"
+    },
+    {
+      "require": true,
+      "scope": "edge",
+      "name": "source_id",
+      "description": "Source node's ID"
+    },
+    {
+      "require": true,
+      "scope": "edge",
+      "name": "target_id",
+      "description": "Target node's ID"
+    },
+    {
+      "required": true,
+      "name": "graph_id",
+      "description": "Graph's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/edges/57665cf244f575d98e000023.json",
+      "request_body": "edge[data]=%7B%22name%22%3A%22last+edge%22%7D&edge[source_id]=57665cf244f575d98e000027&edge[target_id]=57665cf244f575d98e000025&graph_id=57665cf244f575d98e000022",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+      },
+      "response_content_type": null,
+      "curl": null
+    }
+  ]
+}

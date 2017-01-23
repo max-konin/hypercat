@@ -1,0 +1,6 @@
+link-to 'hypernet.nodes' class='item'
+  i.circle.thin.icon
+  | Nodes
+link-to 'hypernet.graphs' class='item'
+  i.sitemap.thin.icon
+  | Graphs

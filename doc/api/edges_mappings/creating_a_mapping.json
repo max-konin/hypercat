@@ -1,0 +1,47 @@
+{
+  "resource": "Edges Mappings",
+  "http_method": "POST",
+  "route": "/api/v1/edges_mappings.json",
+  "description": "Creating a mapping",
+  "explanation": "Create new hypernet in DB",
+  "parameters": [
+    {
+      "scope": "edges_mapping",
+      "required": true,
+      "name": "branch_id",
+      "description": "Edge of a primary network"
+    },
+    {
+      "scope": "edges_mapping",
+      "name": "edge_ids",
+      "description": "Edges of a secondary network"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/edges_mappings.json",
+      "request_body": "edges_mapping[branch_id]=57665cf344f575d98e000055&edges_mapping[edge_ids][]=57665cf344f575d98e00005c&hypernet_id=57665cf344f575d98e000052",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"edges_mapping\": {\n    \"id\": \"57665cf344f575d98e000061\",\n    \"branch_id\": \"57665cf344f575d98e000055\",\n    \"hypernet_id\": \"57665cf344f575d98e000052\",\n    \"edge_ids\": [\n\n    ]\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

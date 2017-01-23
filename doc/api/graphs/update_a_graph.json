@@ -1,0 +1,46 @@
+{
+  "resource": "Graphs",
+  "http_method": "PUT",
+  "route": "/api/v1/graphs/:id.json",
+  "description": "Update a graph",
+  "explanation": "Update a graph",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Hypernet's ID"
+    },
+    {
+      "scope": "graph",
+      "name": "name",
+      "description": "Graph's name"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/graphs/57665cf344f575d98e000032.json",
+      "request_body": "graph[name]=H&hypernet_id=57665cf344f575d98e000031",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+      },
+      "response_content_type": null,
+      "curl": null
+    }
+  ]
+}

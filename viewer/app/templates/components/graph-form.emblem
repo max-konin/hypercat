@@ -1,0 +1,16 @@
+form.ui.form{action 'save' on='submit'}
+  h4.ui.header
+    if graph.isNew
+      | Create a new graph
+    else
+      | Edit graph&nbsp;
+      = graph.name
+
+  table.ui.definition.table
+    tr
+      td Name
+      td class=graph.errors.name:error
+        = input value=graph.name
+
+  button.ui.primary.button type='submit'
+    | Save

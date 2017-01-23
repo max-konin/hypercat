@@ -1,0 +1,23 @@
+h2.ui.header
+  | Graphs of&nbsp;
+  = hypernet.name
+
+.ui.grid
+  .ten.wide.column
+    table.ui.table
+      thead
+        tr
+          th ID
+          th Name
+      tbody
+        = each model as |graph|
+          link-to 'hypernet.graph' graph.id tagName='tr'
+            td = graph.id
+            td = graph.name
+  .six.wide.colomn
+    = liquid-outlet 'properties'
+
+link-to 'hypernet.graphs.new' tagName='button' class='ui primary button'
+  | Add a new graph
+link-to 'hypernet.graphs.generate' tagName='button' class='ui primary button'
+  | Generate from templates

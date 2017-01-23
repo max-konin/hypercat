@@ -33,23 +33,22 @@ resource 'Nodes' do
       do_request
 
       expect(status).to eq 200
-      expect(response_body).to eq ActiveModel::SerializableResource.new(node).to_json
+      expect(response_body).to eq NodeSerializer.new(node).to_json
     end
   end
 
   post '/api/v1/nodes.json' do
     parameter :data, "Custom JSON data", scope: :node
-    parameter :hypernet_id, "Hypernet's ID", required: true
+    parameter :hypernet_id, "Hypernet's ID", required: true, scope: :node
+    parameter :name, "Node's name", required: true, scope: :node
+    parameter :geometry, scope: :node
 
     let(:data) { {x: 1, y: 2}.to_json}
+    let(:name) { 'v' }
+    let(:geometry) { {_type: 'Geometry::Point', x: 1, y: 2} }
 
     example 'Creating a node' do
       explanation 'Create new hypernet in DB'
-
-      expect(params).to eq ({
-        'node' => {'data' => ({x: 1, y: 2}).to_json},
-        'hypernet_id' => hypernet_id
-      })
 
       expect{do_request}.to change{Node.count}.by(1)
 

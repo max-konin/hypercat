@@ -1,0 +1,3 @@
+.ui.vertical.menu
+  link-to 'Edges' 'hypernet.graph.edges' class='item'
+  link-to 'View' 'hypernet.graph.view' class='item'

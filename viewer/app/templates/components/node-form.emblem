@@ -1,0 +1,32 @@
+form.ui.form{action 'save' on='submit'}
+  h4.ui.header
+    if node.isNew
+      | Create a new node
+    else
+      | Edit node&nbsp;
+      = node.name
+
+  table.ui.definition.table
+    tr
+      td Name
+      td class=node.errors.name:error
+        = input value=node.name
+
+
+  h5.ui.header Geometry
+
+  table.ui.definition.table
+    tr
+      td Geometry Type
+      td Point
+    tr
+      td x
+      td
+        = input value=node.geometry.x
+    tr
+      td y
+      td
+        = input value=node.geometry.y
+
+  button.ui.primary.button type='submit'
+    | Save

@@ -1,0 +1,46 @@
+{
+  "resource": "Nodes",
+  "http_method": "PUT",
+  "route": "/api/v1/nodes/:id.json",
+  "description": "Update a node",
+  "explanation": "Update a node",
+  "parameters": [
+    {
+      "required": true,
+      "name": "id",
+      "description": "Hypernet's ID"
+    },
+    {
+      "scope": "node",
+      "name": "data",
+      "description": "Custom JSON data"
+    },
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/v1/nodes/57665cf444f575d98e00008d.json",
+      "request_body": "node[data]=%7B%22name%22%3A%22last+node%22%7D&hypernet_id=57665cf444f575d98e00008c",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+      },
+      "response_content_type": null,
+      "curl": null
+    }
+  ]
+}

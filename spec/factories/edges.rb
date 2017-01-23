@@ -3,6 +3,7 @@ FactoryGirl.define do
     association :graph
     association :target, factory: :node
     association :source, factory: :node
+    name 'E'
   end
 
 end

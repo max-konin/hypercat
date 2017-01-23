@@ -48,4 +48,5 @@ end
 RspecApiDocumentation.configure do |config|
   config.request_headers_to_include = []
   config.response_headers_to_include = []
+  config.format = :json
 end

@@ -1,0 +1,37 @@
+{
+  "resource": "Graphs",
+  "http_method": "GET",
+  "route": "/api/v1/graphs.json",
+  "description": "Listing graphs in hypernet",
+  "explanation": "Returns list of graph in hypernet",
+  "parameters": [
+    {
+      "required": true,
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/graphs.json?hypernet_id=57665cf244f575d98e000028",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+        "hypernet_id": "57665cf244f575d98e000028"
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"graphs\": [\n    {\n      \"id\": \"57665cf244f575d98e000029\",\n      \"name\": \"G\",\n      \"hypernet_id\": \"57665cf244f575d98e000028\",\n      \"edge_ids\": [\n\n      ],\n      \"node_ids\": [\n\n      ]\n    },\n    {\n      \"id\": \"57665cf244f575d98e00002a\",\n      \"name\": \"G\",\n      \"hypernet_id\": \"57665cf244f575d98e000028\",\n      \"edge_ids\": [\n\n      ],\n      \"node_ids\": [\n\n      ]\n    }\n  ]\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

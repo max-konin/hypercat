@@ -33,12 +33,12 @@ resource 'Graphs' do
       do_request
 
       expect(status).to eq 200
-      expect(response_body).to eq ActiveModel::SerializableResource.new(graph).to_json
+      expect(response_body).to eq GraphSerializer.new(graph).to_json
     end
   end
 
   post '/api/v1/graphs.json' do
-    parameter :name, "Graph's name", scope: :graph
+    parameter :name, "Graph's name", required: true, scope: :graph
     parameter :hypernet_id, "Hypernet's ID", required: true
 
     let(:name) {'G'}
@@ -74,7 +74,7 @@ resource 'Graphs' do
     let!(:graph){create :graph, hypernet: hypernet}
     let(:id){graph.id}
 
-    let(:name) {'G'}
+    let(:name) {'H'}
 
     example 'Update a graph' do
       explanation 'Update a graph'

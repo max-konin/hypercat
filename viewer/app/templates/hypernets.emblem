@@ -1,0 +1,16 @@
+.ui.container
+  .ui.semantic
+    .ui.header
+      | Hypernets
+    table.ui.table
+      thead
+        tr
+          th ID
+          th Name
+      tbody
+        = each model as |hypernet|
+          link-to 'hypernet' hypernet.id tagName='tr'
+            td
+              = hypernet.id
+            td
+              = hypernet.name

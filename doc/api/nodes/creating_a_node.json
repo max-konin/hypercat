@@ -1,0 +1,53 @@
+{
+  "resource": "Nodes",
+  "http_method": "POST",
+  "route": "/api/v1/nodes.json",
+  "description": "Creating a node",
+  "explanation": "Create new hypernet in DB",
+  "parameters": [
+    {
+      "scope": "node",
+      "name": "data",
+      "description": "Custom JSON data"
+    },
+    {
+      "required": true,
+      "scope": "node",
+      "name": "hypernet_id",
+      "description": "Hypernet's ID"
+    },
+    {
+      "required": true,
+      "scope": "node",
+      "name": "name",
+      "description": "Node's name"
+    },
+    {
+      "scope": "node",
+      "name": "geometry",
+      "description": "Node geometry"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/nodes.json",
+      "request_body": "node[data]=%7B%22x%22%3A1%2C%22y%22%3A2%7D&node[hypernet_id]=57665cf444f575d98e000087&node[name]=v&node[geometry][_type]=Geometry%3A%3APoint&node[geometry][x]=1&node[geometry][y]=2",
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"node\": {\n    \"id\": \"57665cf444f575d98e000088\",\n    \"data\": {\n      \"x\": 1,\n      \"y\": 2\n    },\n    \"name\": \"v\",\n    \"geometry\": {\n      \"_id\": \"57665cf444f575d98e000089\",\n      \"x\": \"1\",\n      \"y\": \"2\"\n    },\n    \"hypernet_id\": \"57665cf444f575d98e000087\"\n  }\n}",
+      "response_headers": {
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
