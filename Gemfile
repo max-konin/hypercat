@@ -15,7 +15,6 @@ gem 'mongoid'
 gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 
 gem 'react-rails', '~> 1.5.0'
 
