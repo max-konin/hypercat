@@ -1,7 +1,6 @@
 `import Ember from 'ember'`
 
 EdgesRoute = Ember.Route.extend
-  model: () ->
-    @modelFor('hypernet.graph').get 'edges'
+  model: () -> @store.query 'edge', graph_id: @modelFor('hypernet.graph').get('id')
 
 `export default EdgesRoute`

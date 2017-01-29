@@ -1,6 +1,5 @@
 class NodeSerializer < ActiveModel::Serializer
-  attributes :id, :data, :name
+  attributes :id, :data, :name, :hypernet_id
 
   has_one :geometry
-  has_one :hypernet, embed: :id
 end

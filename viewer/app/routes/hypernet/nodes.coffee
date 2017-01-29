@@ -2,8 +2,8 @@
 
 NodesRoute = Ember.Route.extend
   model: ->
-    @hypernet = hypernet = @modelFor 'hypernet'
-    @hypernet.get 'nodes'
+    @hypernet = @modelFor 'hypernet'
+    @store.query 'node', hypernet_id: @hypernet.get('id')
 
   setupController: (controller, model) ->
     controller.set 'model', model

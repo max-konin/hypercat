@@ -6,5 +6,8 @@
   link-to 'hypernets' class='item'
     i.block.layout.icon
     | Nets
+  link-to 'sandbox' class='item'
+    i.lab.icon
+    | Sandbox
 .main-top-margin.main-left-margin
   = liquid-outlet

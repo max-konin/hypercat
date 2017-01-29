@@ -5,6 +5,8 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
+  @route 'sandbox'
+
   @route 'hypernets'
   @route 'hypernet', path: '/hypernets/:id', ->
     @route 'graphs', ->
