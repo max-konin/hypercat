@@ -2,19 +2,17 @@
 
 VivaGraphComponent = Ember.Component.extend
   classNames: ['viva-graph']
-  graph: null
+  edges: []
 
   didInsertElement: ->
     graph = Viva.Graph.graph()
 
-    @get('graph.edges').then (edges) =>
-      edges.forEach (e) ->
-        if e.get('source.id')? && e.get('target.id')?
-          graph.addLink e.get('source.id'), e.get('target.id')
+    @get('edges').forEach (e) ->
+      graph.addLink e.get('source.id'), e.get('target.id') if e.get('source.id')? && e.get('target.id')?
 
-      renderer = Viva.Graph.View.renderer(graph, {
-        container: @get('element')
-      })
-      renderer.run()
+    renderer = Viva.Graph.View.renderer(graph, {
+      container: @get('element')
+    })
+    renderer.run()
 
 `export default VivaGraphComponent`

@@ -16,14 +16,13 @@ Router.map ->
       @route 'view'
       @route 'edges', ->
         @route 'new'
-        @route 'edge', ->
-          @route 'edit'
     @route 'graphs-mappings', ->
       @route 'new'
-      @route 'graphs-mapping', ->
+      @route 'graphs-mapping', path: ':mapping_id', ->
+        @route 'edit'
     @route 'nodes', ->
       @route 'new'
-      @route 'node', path: ':mapping_id', ->
+      @route 'node', path: ':node_id', ->
         @route 'edit'
 
   @route 'test_graph'

@@ -1,16 +1,17 @@
-h4.ui.left.floated.header
-  | Mapping&nbsp;
-  = model.name
+.ui.segment.black.clearing
+  h4.ui.left.floated.header
+    | Mapping&nbsp;
+    = model.name
 
-table.ui.definition.table
-  tr
-    td id
-    td = model.id
-  tr
-    td Name
-    td = model.name
+  table.ui.definition.table
+    tr
+      td id
+      td = model.id
+    tr
+      td Name
+      td = model.name
 
-link-to 'hypernet.graphs-mappings.graphs-mapping.edit' class='ui icon right floated labeled primary button' tagName='button'
-  i.pencil.icon
-  | Edit
+  link-to 'hypernet.graphs-mappings.graphs-mapping.edit' class='ui icon right floated labeled primary button' tagName='button'
+    i.pencil.icon
+    | Edit
 

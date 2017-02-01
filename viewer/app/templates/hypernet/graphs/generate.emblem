@@ -1,16 +1,17 @@
-form.ui.form{action 'generate' on='submit'}
-  h4.ui.header Generate grid graph
-  .field
-    label Name
-    = input value=name
+.ui.segment.black.clearing
+  form.ui.form{action 'generate' on='submit'}
+    h4.ui.header Generate grid graph
+    .field
+      label Name
+      = input value=name
 
-  .field
-    label N
-    = input value=n
-  .field
-    label M
-    = input value=m
+    .field
+      label N
+      = input value=n
+    .field
+      label M
+      = input value=m
 
-  button.ui.button.primary type='submit' class=isGenerating:loading
-    | Generate
+    button.ui.button.primary type='submit' class=isGenerating:loading
+      | Generate
 

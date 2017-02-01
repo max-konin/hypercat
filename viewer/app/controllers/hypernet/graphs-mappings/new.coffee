@@ -5,6 +5,6 @@ HypernetGraphsMappingsNewController = Ember.Controller.extend
   actions:
     save: ->
       @get('model').save().then (model) =>
-        @transitionToRoute('hypernet.graphs-mappings.graphs-mapping', @get('hypernet.model.id'), model.id)
+          @transitionToRoute('hypernet.graphs-mappings.graphs-mapping', model.id)
 
 `export default HypernetGraphsMappingsNewController`

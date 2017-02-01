@@ -9,8 +9,8 @@
           th Source
           th Target
       tbody
-        = each model as |edge|
-          link-to 'hypernet.graph.edges.edge' edge.id tagName='tr'
+        each model as |edge|
+          tr
             td = edge.id
             td = edge.name
             td = edge.source.name
