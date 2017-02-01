@@ -12,13 +12,10 @@ form.ui.form{action 'save' on='submit'}
       td class=edge.errors.name:error
         = input value=edge.name
     tr
-      td Source node
-      td class=edge.errors.source:error
-        ember-selectize content=nodes selection=edge.source optionValuePath="content.id" optionLabelPath="content.name"
-    tr
-      td Target node
-      td class=edge.errors.target:error
-        ember-selectize content=nodes selection=edge.target optionValuePath="content.id" optionLabelPath="content.name"
+      td Nodes
+      td class=edge.errors.nodeIds:error
+        power-select-multiple options=nodes selected=edge.nodes onchange=(action (mut edge.nodes)) as |edge|
+          = edge.name
 
   button.ui.primary.button type='submit'
     | Save

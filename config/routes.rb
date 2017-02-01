@@ -12,6 +12,11 @@ Rails.application.routes.draw do
       resources :edges_mappings
       resources :graphs_mappings
       resources :nodes
+
+      namespace :lists do
+        resources :graph_adjacency, only: :show
+      end
+
     end
   end
 end

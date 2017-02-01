@@ -8,7 +8,7 @@ VivaGraphComponent = Ember.Component.extend
     graph = Viva.Graph.graph()
 
     @get('edges').forEach (e) ->
-      graph.addLink e.get('source.id'), e.get('target.id') if e.get('source.id')? && e.get('target.id')?
+      graph.addLink e.get('nodeIds')[0], e.get('nodeIds')[1] if e.get('nodeIds')[0]? && e.get('nodeIds')[1]?
 
     renderer = Viva.Graph.View.renderer(graph, {
       container: @get('element')

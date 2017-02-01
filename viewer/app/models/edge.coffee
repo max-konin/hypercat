@@ -1,10 +1,10 @@
 `import DS from 'ember-data'`
 
 Edge = DS.Model.extend
-  name: DS.attr('string')
+  name:    DS.attr 'string'
+  nodeIds: DS.attr()
+  graph: DS.belongsTo 'graph'
+  nodes: DS.hasMany 'node'
 
-  graph:  DS.belongsTo 'graph'
-  source: DS.belongsTo 'node'
-  target: DS.belongsTo 'node'
 
 `export default Edge`

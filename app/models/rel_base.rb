@@ -4,4 +4,6 @@ class RelBase
   has_and_belongs_to_many :nodes
 
   store_in collection: :edges
+
+  validates :node_ids, length: { minimum: 2 }
 end

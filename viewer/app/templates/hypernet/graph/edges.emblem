@@ -6,15 +6,15 @@
         tr
           th ID
           th Name
-          th Source
-          th Target
+          th Nodes
       tbody
         each model as |edge|
           tr
             td = edge.id
             td = edge.name
-            td = edge.source.name
-            td = edge.target.name
+            td
+              each edge.nodes as |n|
+                | #{n.name};
   .six.wide.colomn
     = liquid-outlet
 
