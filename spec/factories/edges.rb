@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :edge do
     association :graph
-    association :target, factory: :node
-    association :source, factory: :node
+    nodes { [(create :node), create(:node)] }
     name 'E'
   end
 

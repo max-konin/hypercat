@@ -9,7 +9,7 @@ module Api
       end
 
       def permitted_params
-        params.require(:edge).permit(:source_id, :target_id, :hypernet_id, :name)
+        params.require(:edge).permit(:source_id, :target_id, :hypernet_id, :name, node_ids: [])
       end
 
       def resource

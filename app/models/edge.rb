@@ -11,7 +11,6 @@ class Edge < RelBase
 
   private
   def add_nodes_to_graph
-    graph.nodes << target
-    graph.nodes << source
+    graph.nodes << nodes
   end
 end

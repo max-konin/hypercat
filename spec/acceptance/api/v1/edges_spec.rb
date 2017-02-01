@@ -40,15 +40,13 @@ resource 'Edges' do
   post '/api/v1/edges.json' do
     parameter :data, "Custom JSON data", scope: :edge
     parameter :graph_id, "Graph's ID", required: true, scope: :edge
-    parameter :source_id, "Source node's ID", require: true, scope: :edge
-    parameter :target_id, "Target node's ID", require: true, scope: :edge
+    parameter :node_ids, "IDs of incident nodes", require: true, scope: :edge
     parameter :name, "Edge's name", require: true, scope: :edge
 
     let(:data) { {x: 1, y: 2}.to_json }
     let(:source_node) {create :node}
     let(:target_node) {create :node}
-    let(:source_id) {source_node.id.to_s}
-    let(:target_id) {target_node.id.to_s}
+    let(:node_ids) { [source_node.id.to_s, target_node.id.to_s]}
     let(:name) { 'e' }
 
     example 'Creating a edge' do
@@ -77,13 +75,12 @@ resource 'Edges' do
   put '/api/v1/edges/:id.json' do
     parameter :id, "Graph's ID", required: true
     parameter :data, "Custom JSON data", scope: :edge
-    parameter :source_id, "Source node's ID", require: true, scope: :edge
-    parameter :target_id, "Target node's ID", require: true, scope: :edge
+    parameter :node_ids, "IDs of incident nodes", require: true, scope: :edge
     parameter :graph_id, "Graph's ID", required: true
 
     let!(:edge){create :edge, graph: graph, data: {name: 'first edge'}}
-    let(:source_id) {edge.source.id.to_s}
-    let(:target_id) {edge.target.id.to_s}
+    let(:node_ids) { edge.node_ids }
+
     let(:id){edge.id}
 
     let(:data) {{'name' => 'last edge'}.to_json}

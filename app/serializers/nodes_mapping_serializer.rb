@@ -1,3 +1,3 @@
 class EdgeSerializer < ActiveModel::Serializer
-  attributes :id, :target_id, :source_id, :hypernet_id
+  attributes :id, :target_id, :node_ids
 end

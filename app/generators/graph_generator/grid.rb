@@ -19,12 +19,12 @@ class GraphGenerator
           graph.nodes << node
 
           if nodes.last.present?
-            graph.edges.create source: nodes.last, target: node, name: "e#{nodes.last.name}-#{node.name}"
+            graph.edges.create nodes: [nodes.last, node], name: "e#{nodes.last.name}-#{node.name}"
           end
 
           if latest_layer.present?
             source_node = latest_layer[nodes.size]
-            graph.edges.create source: source_node, target: node, name: "e#{source_node.name}-#{node.name}"
+            graph.edges.create nodes: [source_node, node], name: "e#{source_node.name}-#{node.name}"
           end
 
           nodes << node
