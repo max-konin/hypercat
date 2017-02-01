@@ -22,4 +22,8 @@ svg {
   width: 100%;
 }
 
+.ember-power-select-trigger{
+  min-width: 200px;
+}
+
 @import "ember-power-select";

@@ -1,0 +1,15 @@
+form.ui.form{action 'save' on='submit'}
+  table.ui.definition.table
+    tr
+      td Source
+      td class=model.errors.source:error
+        power-select selected=model.source options=graphs onchange=(action (mut model.source)) as |g|
+          = g.name
+    tr
+      td Target
+      td class=edge.errors.target:error
+        power-select selected=model.target options=graphs onchange=(action (mut model.target)) as |g|
+          = g.name
+
+  button.ui.primary.button type='submit'
+    | Save

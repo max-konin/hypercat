@@ -1,0 +1,5 @@
+.ui.segment.black.clearing
+  h4.ui.header
+    | Edit graphs mappings: #{model.name}
+
+  partial 'hypernet/graphs-mappings/form'

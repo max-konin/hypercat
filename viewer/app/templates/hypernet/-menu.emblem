@@ -2,5 +2,8 @@ link-to 'hypernet.nodes' class='item'
   i.circle.thin.icon
   | Nodes
 link-to 'hypernet.graphs' class='item'
-  i.sitemap.thin.icon
+  i.share.alternate.thin.icon
   | Graphs
+link-to 'hypernet.graphs-mappings' class='item'
+  i.sitemap.thin.icon
+  | Mappings

@@ -1,0 +1,22 @@
+h2.ui.header Graphs mappings:
+.ui.grid
+  .ten.wide.column
+    table.ui.table
+      thead
+        tr
+          th ID
+          th Name
+          th Source
+          th Target
+      tbody
+        = each model as |mapping|
+          link-to 'hypernet.graphs-mappings.graphs-mapping' mapping.id tagName='tr'
+            td = mapping.id
+            td = mapping.name
+            td = mapping.source.name
+            td = mapping.target.name
+  .six.wide.colomn
+    = liquid-outlet
+
+link-to 'hypernet.graphs-mappings.new' tagName='button' class='ui primary button'
+  | Add a new mapping

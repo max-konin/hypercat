@@ -18,11 +18,14 @@ Router.map ->
         @route 'new'
         @route 'edge', ->
           @route 'edit'
-
+    @route 'graphs-mappings', ->
+      @route 'new'
+      @route 'graphs-mapping', ->
     @route 'nodes', ->
       @route 'new'
-      @route 'node', path: ':node_id', ->
+      @route 'node', path: ':mapping_id', ->
         @route 'edit'
+
   @route 'test_graph'
 
 `export default Router`

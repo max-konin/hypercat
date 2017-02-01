@@ -1,0 +1,3 @@
+.ui.segment.black.clearing
+  h4.ui.header New graphs mappings:
+  partial 'hypernet/graphs-mappings/form'
