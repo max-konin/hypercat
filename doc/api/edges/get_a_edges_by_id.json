@@ -22,17 +22,17 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/edges/57665cf244f575d98e00000e.json?graph_id=57665cf244f575d98e00000d",
+      "request_path": "/api/v1/edges/5891d5de35410e6470000071.json?graph_id=5891d5de35410e6470000070",
       "request_body": null,
       "request_headers": {
       },
       "request_query_parameters": {
-        "graph_id": "57665cf244f575d98e00000d"
+        "graph_id": "5891d5de35410e6470000070"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"edge\": {\n    \"id\": \"57665cf244f575d98e00000e\",\n    \"data\": {\n      \"name\": \"first edge\"\n    },\n    \"target_id\": \"57665cf244f575d98e000010\",\n    \"source_id\": \"57665cf244f575d98e000012\",\n    \"graph_id\": \"57665cf244f575d98e00000d\",\n    \"name\": \"E\"\n  }\n}",
+      "response_body": "{\n  \"edge\": {\n    \"id\": \"5891d5de35410e6470000071\",\n    \"data\": {\n      \"name\": \"first edge\"\n    },\n    \"graph_id\": \"5891d5de35410e6470000070\",\n    \"name\": \"E\",\n    \"node_ids\": [\n      \"5891d5de35410e6470000073\",\n      \"5891d5de35410e6470000075\"\n    ]\n  }\n}",
       "response_headers": {
       },
       "response_content_type": "application/json; charset=utf-8",

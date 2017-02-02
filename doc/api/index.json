@@ -65,8 +65,8 @@
           "method": "get"
         },
         {
-          "description": "Listing mappings in hypernet",
-          "link": "edges_mappings/listing_mappings_in_hypernet.json",
+          "description": "Listing edges mappings in GraphMapping",
+          "link": "edges_mappings/listing_edges_mappings_in_graphmapping.json",
           "groups": "all",
           "route": "/api/v1/edges_mappings.json",
           "method": "get"
@@ -76,6 +76,58 @@
           "link": "edges_mappings/update_a_mapping.json",
           "groups": "all",
           "route": "/api/v1/edges_mappings/:id.json",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "name": "Graph Adjacency List",
+      "examples": [
+        {
+          "description": "Get a list for graph",
+          "link": "graph_adjacency_list/get_a_list_for_graph.json",
+          "groups": "all",
+          "route": "/api/v1/lists/graph_adjacency/:id.json",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Graph Mappings",
+      "examples": [
+        {
+          "description": "Creating a mapping",
+          "link": "graph_mappings/creating_a_mapping.json",
+          "groups": "all",
+          "route": "/api/v1/graphs_mappings.json",
+          "method": "post"
+        },
+        {
+          "description": "Delete mapping by ID",
+          "link": "graph_mappings/delete_mapping_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/graphs_mappings/:id.json",
+          "method": "delete"
+        },
+        {
+          "description": "Get a mappings by id",
+          "link": "graph_mappings/get_a_mappings_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/graphs_mappings/:id.json",
+          "method": "get"
+        },
+        {
+          "description": "Listing mappings in hypernet",
+          "link": "graph_mappings/listing_mappings_in_hypernet.json",
+          "groups": "all",
+          "route": "/api/v1/graphs_mappings.json",
+          "method": "get"
+        },
+        {
+          "description": "Update a mapping",
+          "link": "graph_mappings/update_a_mapping.json",
+          "groups": "all",
+          "route": "/api/v1/graphs_mappings/:id.json",
           "method": "put"
         }
       ]

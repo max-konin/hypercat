@@ -22,8 +22,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/v1/nodes/57665cf444f575d98e00008b.json",
-      "request_body": "hypernet_id=57665cf444f575d98e00008a",
+      "request_path": "/api/v1/nodes/5891d5de35410e64700000d5.json",
+      "request_body": "hypernet_id=5891d5de35410e64700000d4",
       "request_headers": {
       },
       "request_query_parameters": {

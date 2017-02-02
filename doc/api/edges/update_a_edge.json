@@ -18,14 +18,8 @@
     {
       "require": true,
       "scope": "edge",
-      "name": "source_id",
-      "description": "Source node's ID"
-    },
-    {
-      "require": true,
-      "scope": "edge",
-      "name": "target_id",
-      "description": "Target node's ID"
+      "name": "node_ids",
+      "description": "IDs of incident nodes"
     },
     {
       "required": true,
@@ -39,8 +33,8 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/api/v1/edges/57665cf244f575d98e000023.json",
-      "request_body": "edge[data]=%7B%22name%22%3A%22last+edge%22%7D&edge[source_id]=57665cf244f575d98e000027&edge[target_id]=57665cf244f575d98e000025&graph_id=57665cf244f575d98e000022",
+      "request_path": "/api/v1/edges/5891d5de35410e6470000086.json",
+      "request_body": "edge[data]=%7B%22name%22%3A%22last+edge%22%7D&edge[node_ids][]=5891d5de35410e6470000088&edge[node_ids][]=5891d5de35410e647000008a&graph_id=5891d5de35410e6470000085",
       "request_headers": {
       },
       "request_query_parameters": {

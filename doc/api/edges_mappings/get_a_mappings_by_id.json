@@ -12,8 +12,8 @@
     },
     {
       "required": true,
-      "name": "hypernet_id",
-      "description": "Hypernet's ID"
+      "name": "mapping_id",
+      "description": "Mapping's ID"
     }
   ],
   "response_fields": [
@@ -22,17 +22,16 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/edges_mappings/57665cf344f575d98e00004a.json?hypernet_id=57665cf344f575d98e000049",
+      "request_path": "/api/v1/edges_mappings/5891d5dd35410e647000001c.json",
       "request_body": null,
       "request_headers": {
       },
       "request_query_parameters": {
-        "hypernet_id": "57665cf344f575d98e000049"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"edges_mapping\": {\n    \"id\": \"57665cf344f575d98e00004a\",\n    \"branch_id\": \"57665cf344f575d98e00004d\",\n    \"hypernet_id\": \"57665cf344f575d98e000049\",\n    \"edge_ids\": [\n\n    ]\n  }\n}",
+      "response_body": "{\n  \"edges_mapping\": {\n    \"id\": \"5891d5dd35410e647000001c\",\n    \"branch_id\": \"5891d5dd35410e647000001f\",\n    \"graphs_mapping_id\": \"5891d5dd35410e6470000017\",\n    \"edge_ids\": [\n\n    ]\n  }\n}",
       "response_headers": {
       },
       "response_content_type": "application/json; charset=utf-8",

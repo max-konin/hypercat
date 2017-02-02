@@ -52,6 +52,7 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, false
 set :puma_preload_app, true
 set :nginx_use_ssl, false
+set :rvm_ruby_version, '2.3.3'
 
 set :nginx_server_name, 'hc.kerweb.ru'
 # end puma conf

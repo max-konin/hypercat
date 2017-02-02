@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/hypernets/57665cf344f575d98e000034.json",
+      "request_path": "/api/v1/hypernets/5891d5de35410e64700000be.json",
       "request_body": null,
       "request_headers": {
       },
@@ -26,7 +26,7 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"hypernet\": {\n    \"id\": \"57665cf344f575d98e000034\",\n    \"name\": \"example\",\n    \"node_ids\": [\n\n    ],\n    \"graph_ids\": [\n\n    ]\n  }\n}",
+      "response_body": "{\n  \"hypernet\": {\n    \"id\": \"5891d5de35410e64700000be\",\n    \"name\": \"example\"\n  }\n}",
       "response_headers": {
       },
       "response_content_type": "application/json; charset=utf-8",

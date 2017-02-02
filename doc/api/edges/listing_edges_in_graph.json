@@ -17,17 +17,17 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/edges.json?graph_id=57665cf244f575d98e000001",
+      "request_path": "/api/v1/edges.json?graph_id=5891d5de35410e6470000064",
       "request_body": null,
       "request_headers": {
       },
       "request_query_parameters": {
-        "graph_id": "57665cf244f575d98e000001"
+        "graph_id": "5891d5de35410e6470000064"
       },
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"edges\": [\n    {\n      \"id\": \"57665cf244f575d98e000002\",\n      \"data\": {\n        \"name\": \"first edge\"\n      },\n      \"target_id\": \"57665cf244f575d98e000004\",\n      \"source_id\": \"57665cf244f575d98e000006\",\n      \"graph_id\": \"57665cf244f575d98e000001\",\n      \"name\": \"E\"\n    },\n    {\n      \"id\": \"57665cf244f575d98e000007\",\n      \"data\": {\n        \"name\": \"second edge\"\n      },\n      \"target_id\": \"57665cf244f575d98e000009\",\n      \"source_id\": \"57665cf244f575d98e00000b\",\n      \"graph_id\": \"57665cf244f575d98e000001\",\n      \"name\": \"E\"\n    }\n  ]\n}",
+      "response_body": "{\n  \"edges\": [\n    {\n      \"id\": \"5891d5de35410e6470000065\",\n      \"data\": {\n        \"name\": \"first edge\"\n      },\n      \"graph_id\": \"5891d5de35410e6470000064\",\n      \"name\": \"E\",\n      \"node_ids\": [\n        \"5891d5de35410e6470000067\",\n        \"5891d5de35410e6470000069\"\n      ]\n    },\n    {\n      \"id\": \"5891d5de35410e647000006a\",\n      \"data\": {\n        \"name\": \"second edge\"\n      },\n      \"graph_id\": \"5891d5de35410e6470000064\",\n      \"name\": \"E\",\n      \"node_ids\": [\n        \"5891d5de35410e647000006c\",\n        \"5891d5de35410e647000006e\"\n      ]\n    }\n  ]\n}",
       "response_headers": {
       },
       "response_content_type": "application/json; charset=utf-8",

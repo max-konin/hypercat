@@ -17,7 +17,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/v1/hypernets/57665cf344f575d98e000036.json",
+      "request_path": "/api/v1/hypernets/5891d5de35410e64700000c0.json",
       "request_body": null,
       "request_headers": {
       },

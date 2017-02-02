@@ -12,8 +12,8 @@
     },
     {
       "required": true,
-      "name": "hypernet_id",
-      "description": "Hypernet's ID"
+      "name": "graphs_mapping_id",
+      "description": "Graphs Mapping's ID"
     }
   ],
   "response_fields": [
@@ -22,8 +22,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/v1/edges_mappings/57665cf344f575d98e000063.json",
-      "request_body": "hypernet_id=57665cf344f575d98e000062",
+      "request_path": "/api/v1/edges_mappings/5891d5de35410e647000003f.json",
+      "request_body": "graphs_mapping_id=5891d5de35410e647000003a",
       "request_headers": {
       },
       "request_query_parameters": {

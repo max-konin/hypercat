@@ -22,8 +22,8 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/v1/edges/57665cf244f575d98e00001c.json",
-      "request_body": "graph_id=57665cf244f575d98e00001b",
+      "request_path": "/api/v1/edges/5891d5de35410e647000007f.json",
+      "request_body": "graph_id=5891d5de35410e647000007e",
       "request_headers": {
       },
       "request_query_parameters": {
