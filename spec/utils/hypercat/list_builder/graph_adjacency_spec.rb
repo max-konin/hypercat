@@ -14,10 +14,10 @@ describe Hypercat::ListBuilder::GraphAdjacency do
           {'_id' => nodes[1].id, 'node_ids' => [nodes[3].id, nodes[0].id]},
           {'_id' => nodes[2].id, 'node_ids' => [nodes[3].id, nodes[0].id]},
           {'_id' => nodes[3].id, 'node_ids' => [nodes[1].id, nodes[2].id]}
-      ]
+      ].to_set
     end
     
-    subject { list_builder.result.to_a }
+    subject { list_builder.result.to_a.to_set }
 
     it 'returns an adjacency list of graph' do
       expect(subject).to eq expected_list

@@ -18,13 +18,10 @@ module Hypercat
         pipeline << { '$match': {graph_id: @graph.id} }
         pipeline << { '$project': {node_ids: 1, sources: '$node_ids'} }
         pipeline << { '$unwind': '$sources'}
-        pipeline << { '$group': {_id: '$sources', targets: {'$push': '$node_ids'}}}
-        pipeline << { '$unwind': '$targets'}
-        pipeline << { '$unwind': '$targets'}
-        pipeline << { '$project': { 'sources': 1, 'targets': 1, s_eq_t: {'$eq': ['$_id', '$targets']}}}
+        pipeline << { '$unwind': '$node_ids'}
+        pipeline << { '$project': { 'sources': 1, 'node_ids': 1, s_eq_t: {'$eq': ['$sources', '$node_ids']}}}
         pipeline << { '$match': { s_eq_t: false }}
-        pipeline << { '$group': {_id: '$_id', node_ids: {'$addToSet': '$targets'}}}
-
+        pipeline << { '$group': {_id: '$sources', node_ids: {'$addToSet': '$node_ids'}}}
         pipeline
       end
     end
